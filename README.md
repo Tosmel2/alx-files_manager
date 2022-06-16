@@ -37,7 +37,7 @@ Server running on port 5000
 ...
 </code></pre></div>
 <p dir="auto">Create user:</p>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="bob@dylan:~$ curl 0.0.0.0:5000/users -XPOST -H &quot;Content-Type: application/json&quot; -d '{ &quot;email&quot;: &quot;tosmel@ADNEGS.com&quot;, &quot;password&quot;: &quot;toto1234!&quot; }' ; echo &quot;&quot;
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="bob@dylan:~$ curl 0.0.0.0:5000/users -XPOST -H &quot;Content-Type: application/json&quot; -d '{ &quot;email&quot;: &quot;tosmel@ADNEGS.com&quot;, &quot;password&quot;: &quot;1234!&quot; }' ; echo &quot;&quot;
 {&quot;id&quot;:&quot;5f1e7d35c7ba06511e683b21&quot;,&quot;email&quot;:&quot;tosmel@ADNEGS.com&quot;}"><pre class="notranslate"><code>bob@dylan:~$ curl 0.0.0.0:5000/users -XPOST -H "Content-Type: application/json" -d '{ "email": "bob@dylan.com", "password": "toto1234!" }' ; echo ""
 {"id":"5f1e7d35c7ba06511e683b21","email":"bob@dylan.com"}
 </code></pre></div>
@@ -46,12 +46,12 @@ Server running on port 5000
 {&quot;token&quot;:&quot;031bffac-3edc-4e51-aaae-1c121317da8a&quot;}
 tosmel@ADNEGS:~$
 tosmel@ADNEGS:~$ curl 0.0.0.0:5000/users/me -H &quot;X-Token: 031bffac-3edc-4e51-aaae-1c121317da8a&quot; ; echo &quot;&quot;
-{&quot;id&quot;:&quot;5f1e7cda04a394508232559d&quot;,&quot;email&quot;:&quot;bob@dylan.com&quot;}
+{&quot;id&quot;:&quot;5f1e7cda04a394508232559d&quot;,&quot;email&quot;:&quot;tosmel@ADNEGS.com&quot;}
 tosmel@ADNEGS:~$ "><pre class="notranslate"><code> curl 0.0.0.0:5000/connect -H "Authorization: Basic Ym9iQGR5bGFuLmNvbTp0b3RvMTIzNCE=" ; echo ""
 {"token":"031bffac-3edc-4e51-aaae-1c121317da8a"}
 tosmel@ADNEGS:~$
 tosmel@ADNEGS:~$ curl 0.0.0.0:5000/users/me -H "X-Token: 031bffac-3edc-4e51-aaae-1c121317da8a" ; echo ""
-{"id":"5f1e7cda04a394508232559d","email":"bob@dylan.com"}
+{"id":"5f1e7cda04a394508232559d","email":"tosmel@ADNEGS.com"}
 tosmel@ADNEGS:~$ 
 </code></pre></div>
 <p dir="auto">Create file:</p>
